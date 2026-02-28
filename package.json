@@ -1,0 +1,202 @@
+{
+  "name": "vasc",
+  "displayName": "Vasc",
+  "description": "Full featured tool for Roblox development",
+  "publisher": "Dervex",
+  "version": "2.0.20",
+  "icon": "assets/logo.png",
+  "homepage": "https://vasc.wiki",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vasc-rbx/vasc-vscode.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vasc-rbx/vasc-vscode/issues"
+  },
+  "engines": {
+    "vscode": "^1.70.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "Roblox",
+    "Studio",
+    "Lua",
+    "Luau",
+    "Sync"
+  ],
+  "activationEvents": [
+    "onLanguage:lua",
+    "onLanguage:luau",
+    "workspaceContains:*.project.json"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vasc.openMenu",
+        "title": "Open Menu",
+        "category": "Vasc"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vasc.play",
+        "when": "editorLangId == lua || editorLangId == luau",
+        "key": "f5"
+      },
+      {
+        "command": "vasc.run",
+        "when": "editorLangId == lua || editorLangId == luau",
+        "key": "f8"
+      },
+      {
+        "command": "vasc.start",
+        "when": "editorLangId == lua || editorLangId == luau",
+        "key": "f7"
+      },
+      {
+        "command": "vasc.stop",
+        "when": "editorLangId == lua || editorLangId == luau",
+        "key": "shift+f5"
+      },
+      {
+        "command": "vasc.exec",
+        "when": "editorLangId == lua || editorLangId == luau",
+        "key": "f6"
+      }
+    ],
+    "configuration": {
+      "title": "Vasc",
+      "properties": {
+        "vasc.autoUpdate": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether Vasc should update the CLI automatically",
+          "order": 0
+        },
+        "vasc.autoRun": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether Vasc should serve the last used project when launching VS Code",
+          "order": 1
+        },
+        "vasc.autoLaunchStudio": {
+          "type": "boolean",
+          "default": false,
+          "description": "Whether Roblox Studio should be launched automatically when running a project",
+          "order": 2
+        },
+        "vasc.focusStudio": {
+          "type": "boolean",
+          "default": true,
+          "description": "Whether Roblox Studio window should get focused when executing code",
+          "order": 3
+        },
+        "vasc.notificationLevel": {
+          "type": "string",
+          "default": "Info",
+          "description": "Level of notifications to show in the bottom right corner",
+          "enum": [
+            "Info",
+            "Warning",
+            "Error",
+            "Off"
+          ],
+          "order": 4
+        },
+        "vasc.defaultHost": {
+          "type": "string",
+          "default": "localhost",
+          "description": "Host name of the serve address",
+          "pattern": "[hostname]",
+          "patternErrorMessage": "This symbol is not allowed",
+          "order": 5
+        },
+        "vasc.defaultPort": {
+          "type": "number",
+          "default": 8000,
+          "description": "Port number of the serve address",
+          "minimum": 0,
+          "maximum": 65535,
+          "order": 6
+        },
+        "vasc.globalConfig": {
+          "type": "object",
+          "default": {},
+          "description": "Contents of the CLI global configuration file",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "order": 7
+        },
+        "vasc.verbose": {
+          "type": "boolean",
+          "default": false,
+          "description": "Log verbose tracing of the CLI to the output panel",
+          "order": 8
+        }
+      }
+    },
+    "jsonValidation": [
+      {
+        "fileMatch": "*.project.json",
+        "url": "./assets/schemas/project.json"
+      },
+      {
+        "fileMatch": "*.data.json",
+        "url": "./assets/schemas/data.json"
+      },
+      {
+        "fileMatch": "*.meta.json",
+        "url": "./assets/schemas/data.json"
+      },
+      {
+        "fileMatch": "*.model.json",
+        "url": "./assets/schemas/model.json"
+      }
+    ],
+    "icons": {
+      "vasc-logo": {
+        "description": "Vasc logo",
+        "default": {
+          "fontPath": "assets/vasc-font.woff",
+          "fontCharacter": "\\41"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "format:write": "npx prettier --write .",
+    "format:check": "npx prettier --check .",
+    "lint": "eslint src --max-warnings 0 --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "16.x",
+    "@types/vscode": "^1.70.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^8.57.1",
+    "glob": "^10.5.0",
+    "mocha": "^10.8.2",
+    "prettier": "^3.7.4",
+    "ts-loader": "^9.5.4",
+    "typescript": "^5.9.3",
+    "webpack": "^5.103.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "@terascope/fetch-github-release": "^0.8.10"
+  }
+}
