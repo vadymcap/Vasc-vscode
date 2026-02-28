@@ -19,11 +19,11 @@ It is part of the VASC project, a fork of [Argon](https://github.com/argon-rbx/a
 
 ## Related Packages
 
-| Package | Description |
-|---|---|
-| [**vasc**](https://github.com/vadymcap/vasc) | Core CLI — handles all processing and syncing logic |
-| **vasc-vscode** *(this repo)* | VS Code extension — GUI wrapper around the CLI |
-| [**vasc-roblox**](https://github.com/vadymcap/vasc-roblox) | Studio plugin — required for live sync to function |
+| Package                                                    | Description                                         |
+| ---------------------------------------------------------- | --------------------------------------------------- |
+| [**vasc**](https://github.com/vadymcap/vasc)               | Core CLI — handles all processing and syncing logic |
+| **vasc-vscode** _(this repo)_                              | VS Code extension — GUI wrapper around the CLI      |
+| [**vasc-roblox**](https://github.com/vadymcap/vasc-roblox) | Studio plugin — required for live sync to function  |
 
 ## Features
 

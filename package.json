@@ -180,6 +180,8 @@
     "test": "node ./out/test/runTest.js"
   },
   "devDependencies": {
+    "@eslint/config-array": "^0.23.2",
+    "@eslint/object-schema": "^3.0.2",
     "@types/mocha": "^10.0.10",
     "@types/node": "^16.18.126",
     "@types/vscode": "^1.70.0",
@@ -188,12 +190,12 @@
     "@vscode/test-electron": "^2.5.2",
     "eslint": "^8.57.1",
     "glob": "^10.5.0",
-    "mocha": "^10.8.2",
+    "mocha": "^11.7.5",
     "prettier": "^3.8.1",
-    "ts-loader": "^9.5.4",
+    "ts-loader": "^9.2.1",
     "typescript": "^5.9.3",
     "webpack": "^5.105.3",
-    "webpack-cli": "^5.1.4"
+    "webpack-cli": "^4.10.0"
   },
   "dependencies": {
     "@terascope/fetch-github-release": "^0.8.10"

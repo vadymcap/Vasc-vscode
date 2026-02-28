@@ -47,8 +47,8 @@ const extensionConfig = {
   stats: {
     errorDetails: true,
     warningsFilter: [
-      /Critical dependency: the request of a dependency is an expression/
-    ]
+      /Critical dependency: the request of a dependency is an expression/,
+    ],
   },
 }
 module.exports = [extensionConfig]
