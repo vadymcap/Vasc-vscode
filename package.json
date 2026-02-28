@@ -2,16 +2,15 @@
   "name": "vasc",
   "displayName": "Vasc",
   "description": "Full featured tool for Roblox development",
-  "publisher": "Dervex",
+  "publisher": "Vaist",
   "version": "2.0.20",
   "icon": "assets/logo.png",
-  "homepage": "https://vasc.wiki",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vasc-rbx/vasc-vscode.git"
+    "url": "https://github.com/vadymcap/vasc-vscode.git"
   },
   "bugs": {
-    "url": "https://github.com/vasc-rbx/vasc-vscode/issues"
+    "url": "https://github.com/vadymcap/vasc-vscode/issues"
   },
   "engines": {
     "vscode": "^1.70.0"

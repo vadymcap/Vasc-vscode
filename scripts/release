@@ -13,7 +13,7 @@ echo
 read -p "Enter a new version to release: " version
 echo
 
-read -p "Is this version correct: ${bold}$version${normal} [y/n] " confirm 
+read -p "Is this version correct: ${bold}$version${normal} [y/n] " confirm
 echo
 
 if [ "$confirm" != "y" ]; then

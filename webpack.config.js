@@ -44,5 +44,11 @@ const extensionConfig = {
   infrastructureLogging: {
     level: "log", // enables logging required for problem matchers
   },
+  stats: {
+    errorDetails: true,
+    warningsFilter: [
+      /Critical dependency: the request of a dependency is an expression/
+    ]
+  },
 }
 module.exports = [extensionConfig]
