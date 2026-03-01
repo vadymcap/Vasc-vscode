@@ -15,8 +15,8 @@ export async function install() {
   fs.mkdirSync(path.dirname(execPath), { recursive: true })
 
   await downloadRelease(
-    "vasc-rbx",
-    "vasc",
+    "vadymcap",
+    "Vasc",
     path.dirname(execPath),
     undefined,
     (asset) => {
