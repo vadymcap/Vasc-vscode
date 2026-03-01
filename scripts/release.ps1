@@ -19,12 +19,12 @@ function Require-Command {
 function Exec {
     param(
         [Parameter(Mandatory = $true)][string]$File,
-        [string[]]$Args = @()
+        [string[]]$Arguments = @()
     )
 
-    & $File @Args
+    & $File @Arguments
     if ($LASTEXITCODE -ne 0) {
-        throw "Command failed: $File $($Args -join ' ')"
+        throw "Command failed: $File $($Arguments -join ' ')"
     }
 }
 
@@ -69,10 +69,6 @@ try {
         throw 'Version/tag cannot be empty.'
     }
 
-    if ($Version -notmatch '^v') {
-        $Version = "v$Version"
-    }
-
     $vsixName = "vasc-$Version.vsix"
     $vsixPath = Join-Path $repoRoot $vsixName
 
@@ -89,26 +85,26 @@ try {
 
     if (-not $SkipInstall) {
         Write-Host "Installing dependencies..."
-        Exec -File 'npm' -Args @('ci')
+        Exec -File 'npm' -Arguments @('ci')
     }
 
     Write-Host "Building extension bundle..."
-    Exec -File 'npm' -Args @('run', 'package')
+    Exec -File 'npm' -Arguments @('run', 'package')
 
     Write-Host "Packaging VSIX: $vsixName"
-    Exec -File 'npx' -Args @('--yes', '@vscode/vsce', 'package', '--out', $vsixName)
+    Exec -File 'npx' -Arguments @('--yes', '@vscode/vsce', 'package', '--out', $vsixName)
 
     Write-Host "Pushing branch '$branch'..."
-    Exec -File 'git' -Args @('push', 'origin', $branch)
+    Exec -File 'git' -Arguments @('push', 'origin', $branch)
 
-    $existingTag = (git tag --list $Version).Trim()
-    if ($existingTag) {
+    $existingTag = git tag --list $Version
+    if (-not [string]::IsNullOrWhiteSpace(($existingTag | Out-String).Trim())) {
         throw "Tag '$Version' already exists locally."
     }
 
     Write-Host "Creating and pushing tag '$Version'..."
-    Exec -File 'git' -Args @('tag', $Version)
-    Exec -File 'git' -Args @('push', 'origin', $Version)
+    Exec -File 'git' -Arguments @('tag', $Version)
+    Exec -File 'git' -Arguments @('push', 'origin', $Version)
 
     $releaseExists = $false
     try {
@@ -121,11 +117,11 @@ try {
 
     if ($releaseExists) {
         Write-Host "Release '$Version' exists. Uploading asset..."
-        Exec -File 'gh' -Args @('release', 'upload', $Version, $vsixPath, '--clobber')
+        Exec -File 'gh' -Arguments @('release', 'upload', $Version, $vsixPath, '--clobber')
     }
     else {
         Write-Host "Creating release '$Version' with asset..."
-        Exec -File 'gh' -Args @('release', 'create', $Version, $vsixPath, '--title', $Version, '--generate-notes')
+        Exec -File 'gh' -Arguments @('release', 'create', $Version, $vsixPath, '--title', $Version, '--generate-notes')
     }
 
     Write-Host ''
