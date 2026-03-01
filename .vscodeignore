@@ -8,6 +8,7 @@ scripts/**
 .github/**
 .gitignore
 .prettierignore
+.env
 webpack.config.js
 **/tsconfig.json
 **/.eslintrc.json

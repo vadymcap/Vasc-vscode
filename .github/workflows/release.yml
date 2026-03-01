@@ -93,20 +93,20 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: npx vsce package --out vasc.vsix
+        run: npx vsce package --out vasc-${{ github.ref_name }}.vsix
 
       - name: Upload to Artifacts
         uses: actions/upload-artifact@v4
         with:
           name: vasc-${{ github.ref_name }}.vsix
-          path: vasc.vsix
+          path: vasc-${{ github.ref_name }}.vsix
 
       - name: Upload to Release
         uses: shogo82148/actions-upload-release-asset@v1
         with:
           upload_url: ${{ needs.draft-release.outputs.upload_url }}
           asset_name: vasc-${{ github.ref_name }}.vsix
-          asset_path: vasc.vsix
+          asset_path: vasc-${{ github.ref_name }}.vsix
 
   publish-release:
     name: Publish Release
