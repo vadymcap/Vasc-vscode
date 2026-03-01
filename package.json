@@ -177,7 +177,8 @@
     "format:write": "npx prettier --write .",
     "format:check": "npx prettier --check .",
     "lint": "eslint src --max-warnings 0 --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "node ./out/test/runTest.js",
+    "release:ps1": "powershell -ExecutionPolicy Bypass -File ./scripts/release.ps1"
   },
   "devDependencies": {
     "@eslint/config-array": "^0.23.2",
