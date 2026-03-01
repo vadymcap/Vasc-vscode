@@ -30,7 +30,7 @@ export class State {
   public addSession(session: Session) {
     if (this.sessions.find((s) => session.isSimilar(s))) {
       logger.warn(
-        `Session with type: ${session.type} and project: ${session.project} is already running. Ignore this message if this is desired behavior`,
+        `Session with type: ${session.type} and project: ${session.project} is already running. Ignore this message if this is desired behavior.`,
       )
     }
 
