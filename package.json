@@ -3,14 +3,14 @@
   "displayName": "Vasc",
   "description": "Full featured tool for Roblox development",
   "publisher": "Vaist",
-  "version": "2.0.20",
+  "version": "2.0.23",
   "icon": "assets/logo.png",
   "repository": {
     "type": "git",
-    "url": "https://github.com/vadymcap/vasc-vscode.git"
+    "url": "https://github.com/vadymcap/Vasc-vscode.git"
   },
   "bugs": {
-    "url": "https://github.com/vadymcap/vasc-vscode/issues"
+    "url": "https://github.com/vadymcap/Vasc-vscode/issues"
   },
   "engines": {
     "vscode": "^1.70.0"

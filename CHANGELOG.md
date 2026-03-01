@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ## [Unreleased]
 
+## [2.0.23] - 2026-03-01
+
+### Fixed
+
+- CLI installer no longer surfaces raw GitHub `HTTP 404` errors
+- Installer now falls back to an existing global `vasc` installation when release assets are unavailable
+
 ## [2.0.20] - 2025-12-10
 
 ### Fixed
@@ -208,25 +215,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Initial release
 
-[unreleased]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.20...HEAD
-[2.0.20]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.19...2.0.20
-[2.0.19]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.18...2.0.19
-[2.0.18]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.17...2.0.18
-[2.0.17]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.16...2.0.17
-[2.0.16]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.15...2.0.16
-[2.0.15]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.14...2.0.15
-[2.0.14]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.13...2.0.14
-[2.0.13]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.12...2.0.13
-[2.0.12]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.11...2.0.12
-[2.0.11]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.10...2.0.11
-[2.0.10]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.9...2.0.10
-[2.0.9]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.8...2.0.9
-[2.0.8]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.7...2.0.8
-[2.0.7]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.6...2.0.7
-[2.0.6]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.5...2.0.6
-[2.0.5]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.4...2.0.5
-[2.0.4]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.3...2.0.4
-[2.0.3]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.2...2.0.3
-[2.0.2]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.1...2.0.2
-[2.0.1]: https://github.com/vasc-rbx/vasc-vscode/compare/2.0.0...2.0.1
-[2.0.0]: https://github.com/vasc-rbx/vasc-vscode/compare/87f2daec9b41b73676470d5eab01fe2fdc129cc8...2.0.0
+[unreleased]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.20...HEAD
+[2.0.20]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.19...2.0.20
+[2.0.19]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.18...2.0.19
+[2.0.18]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.17...2.0.18
+[2.0.17]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.16...2.0.17
+[2.0.16]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.15...2.0.16
+[2.0.15]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.14...2.0.15
+[2.0.14]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.13...2.0.14
+[2.0.13]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.12...2.0.13
+[2.0.12]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.11...2.0.12
+[2.0.11]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.10...2.0.11
+[2.0.10]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.9...2.0.10
+[2.0.9]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.8...2.0.9
+[2.0.8]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.7...2.0.8
+[2.0.7]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.6...2.0.7
+[2.0.6]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.5...2.0.6
+[2.0.5]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.4...2.0.5
+[2.0.4]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.3...2.0.4
+[2.0.3]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.2...2.0.3
+[2.0.2]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.1...2.0.2
+[2.0.1]: https://github.com/vadymcap/Vasc-vscode/compare/2.0.0...2.0.1
+[2.0.0]: https://github.com/vadymcap/Vasc-vscode/compare/87f2daec9b41b73676470d5eab01fe2fdc129cc8...2.0.0

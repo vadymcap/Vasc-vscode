@@ -13,7 +13,7 @@
 
 # VASC — VS Code Extension
 
-VASC for Visual Studio Code is a user-friendly wrapper around the [VASC CLI](https://github.com/vadymcap/vasc), bringing the full Roblox development workflow directly into your editor without touching the terminal.
+VASC for Visual Studio Code is a user-friendly wrapper around the [VASC CLI](https://github.com/vadymcap/Vasc), bringing the full Roblox development workflow directly into your editor without touching the terminal.
 
 It is part of the VASC project, a fork of [Argon](https://github.com/argon-rbx/argon), extended with additional features and improvements.
 
@@ -21,7 +21,7 @@ It is part of the VASC project, a fork of [Argon](https://github.com/argon-rbx/a
 
 | Package                                                    | Description                                         |
 | ---------------------------------------------------------- | --------------------------------------------------- |
-| [**vasc**](https://github.com/vadymcap/vasc)               | Core CLI — handles all processing and syncing logic |
+| [**vasc**](https://github.com/vadymcap/Vasc)               | Core CLI — handles all processing and syncing logic |
 | **vasc-vscode** _(this repo)_                              | VS Code extension — GUI wrapper around the CLI      |
 | [**vasc-roblox**](https://github.com/vadymcap/vasc-roblox) | Studio plugin — required for live sync to function  |
 
@@ -35,8 +35,10 @@ It is part of the VASC project, a fork of [Argon](https://github.com/argon-rbx/a
 
 ## Requirements
 
-- [VASC CLI](https://github.com/vadymcap/vasc) must be installed
+- [VASC CLI](https://github.com/vadymcap/Vasc) must be installed
 - [VASC Roblox Plugin](https://github.com/vadymcap/vasc-roblox) must be installed in Roblox Studio for live sync
+
+For automatic CLI installation in the extension, publish platform binaries in [VASC releases](https://github.com/vadymcap/Vasc/releases).
 
 ---
 
