@@ -193,7 +193,7 @@
     "glob": "^10.5.0",
     "mocha": "^11.7.5",
     "prettier": "^3.8.1",
-    "ts-loader": "^9.2.1",
+    "ts-loader": "^9.5.4",
     "typescript": "^5.9.3",
     "webpack": "^5.105.3",
     "webpack-cli": "^4.10.0"
