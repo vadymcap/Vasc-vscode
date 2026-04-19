@@ -6,7 +6,7 @@
   <br/>
   <br/>
   <img src="https://img.shields.io/badge/license-Apache%202.0-blue" alt="License">
-  <a href="https://github.com/argon-rbx/argon"><img src="https://img.shields.io/badge/built%20on-Argon-orange" alt="Fork of Argon"></a>
+  <a href="https://github.com/vasc-rbx/vasc"><img src="https://img.shields.io/badge/built%20on-Vasc-orange" alt="Fork of Vasc"></a>
 </div>
 
 ---
@@ -15,7 +15,7 @@
 
 VASC for Visual Studio Code is a user-friendly wrapper around the [VASC CLI](https://github.com/vadymcap/Vasc), bringing the full Roblox development workflow directly into your editor without touching the terminal.
 
-It is part of the VASC project, a fork of [Argon](https://github.com/argon-rbx/argon), extended with additional features and improvements.
+It is part of the VASC project, a fork of [Vasc](https://github.com/vasc-rbx/vasc), extended with additional features and improvements.
 
 ## Related Packages
 
@@ -43,5 +43,5 @@ For automatic CLI installation in the extension, publish platform binaries in [V
 ---
 
 <div align="center">
-  <sub>VASC is a fork of <a href="https://github.com/argon-rbx/argon">Argon</a>, originally created by Dervex. Licensed under Apache 2.0.</sub>
+  <sub>VASC is a fork of <a href="https://github.com/vasc-rbx/vasc">Vasc</a>, originally created by Dervex. Licensed under Apache 2.0.</sub>
 </div>
