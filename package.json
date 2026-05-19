@@ -181,7 +181,7 @@
     "release:ps1": "powershell -ExecutionPolicy Bypass -File ./scripts/release.ps1"
   },
   "devDependencies": {
-    "@eslint/config-array": "^0.23.2",
+    "@eslint/config-array": "^0.23.3",
     "@eslint/object-schema": "^3.0.2",
     "@types/mocha": "^10.0.10",
     "@types/node": "^16.18.126",
